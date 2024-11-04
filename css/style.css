@@ -13,6 +13,9 @@ body {
     background-color: #DFF7F9;
     color: black;
     font-family: Impact, 'Arial Narrow Bold', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 h1, h2 {
@@ -23,10 +26,10 @@ p {
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 5%;
 }
-
+ 
 footer {
     position: fixed;
-    bottom: 5px;
+    bottom: 1%;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -56,56 +59,60 @@ nav ul li a {
     text-decoration: none;
 }
 
-nav ul li a span {
-    color: inherit;
-}
-
 .black-bar {
     background-color: black;
-    height: 120px;
+    height: 125px;
+    width: 100%;
 }
 
-.text-home-one {
-    position: absolute;
+.text-home-one, .text-home-two, .text-home-three {
     width: 90%;
-    top: 31%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin: 40px auto;
     text-align: center;
     background-color: rgb(246, 246, 246);
     border: 5px black solid;
+    border-radius: 40px;
     padding: 5%;
-}
-
-.text-home-two {
-    position: absolute;
-    width: 90%;
-    top: 57%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgb(246, 246, 246);
-    border: 5px black solid;
-    padding: 5%;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-home-three {
+    margin-bottom: 25%;
+}
+
+.hand {
+    width: 35%;
     position: absolute;
-    width: 90%;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    background-color: rgb(246, 246, 246);
-    border: 5px black solid;
-    padding: 5%;
+    transition: transform 0.2s ease;
+}
+
+.hand:active {
+    transform: scale(1.3) rotate(10deg);
+}
+
+.hand-right {
+    top: 37%;
+    right: 0%;
+}
+
+.hand-right2 {
+    top: 55%;
+    right: 0%;
+}
+
+.hand-left {
+    top: 60%;
+}
+
+.hand-up {
+    top: 77%;
+    left: 20%;
 }
 
 .background-container {
     position: relative;
+    background-image: url('../images/background.png');
+    padding-top: 70%;
 }
 
-.background-image {
-    width: 100%;
-    height: auto;
-}
